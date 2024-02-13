@@ -9,13 +9,13 @@ def generate_launch_description():
             Node(
                 package="teleop_twist_joy",
                 executable="teleop_node",
-                parameters=[
-                    {"axis_angular": 2},
-                    {"axis_linear": {"x": 3}},
-                    {"require_enable_button": False},
-                    {"scale_linear": {"x": 0.2}},
-                    {"scale_angular": {"yaw": 0.2}},
-                ],
+                parameters=[{
+                    'require_enable_button': False, 
+                    'axis_linear.x':1, 
+                    'scale_linear.x': 1.0, 
+                    'axis_angular.yaw':3, 
+                    'scale_angular.yaw': 1.0
+                }],
             ),
         ]
     )
